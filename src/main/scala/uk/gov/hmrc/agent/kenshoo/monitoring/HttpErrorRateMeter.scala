@@ -17,8 +17,8 @@
 package uk.gov.hmrc.agent.kenshoo.monitoring
 
 import play.api.Logger
-import uk.gov.hmrc.play.http.HeaderCarrier
-import uk.gov.hmrc.play.http.{HttpException, HttpResponse, Upstream4xxResponse, Upstream5xxResponse}
+import uk.gov.hmrc.http.{HeaderCarrier, HttpResponse}
+import uk.gov.hmrc.play.http.{HttpException, Upstream4xxResponse, Upstream5xxResponse}
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}

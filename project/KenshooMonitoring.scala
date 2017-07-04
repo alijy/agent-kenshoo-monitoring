@@ -24,6 +24,7 @@ object KenshooMonitoringBuild extends Build {
   val appDependencies = Seq(
     Dependencies.Compile.kenshoo,
     Dependencies.Compile.hmrcHttpVerbs,
+    Dependencies.Compile.hmrcHttpVerbsPlay,
     Dependencies.Compile.hmrcHttpException,
     Dependencies.Test.scalaTest,
     Dependencies.Test.restAssured,
@@ -39,7 +40,8 @@ object KenshooMonitoringBuild extends Build {
       targetJvm := "jvm-1.8",
       scalaVersion := "2.11.8",
       libraryDependencies ++= appDependencies,
-      crossScalaVersions := Seq("2.11.8")
+      crossScalaVersions := Seq("2.11.8"),
+      version := "100.0-SNAPSHOT"
     )
     .settings(publishAllArtefacts : _*)
     .settings(resolvers += Resolver.bintrayRepo("hmrc", "releases"))
@@ -50,7 +52,8 @@ object Dependencies {
 
   object Compile {
     val kenshoo = "de.threedimensions" %% "metrics-play" % "2.5.13"
-    val hmrcHttpVerbs = "uk.gov.hmrc" %% "http-verbs" % "6.3.0"
+    val hmrcHttpVerbs = "uk.gov.hmrc" %% "http-verbs" % "100.0-SNAPSHOT"
+    val hmrcHttpVerbsPlay = "uk.gov.hmrc" %% "http-verbs-play-25" % "100.0-SNAPSHOT"
     val hmrcHttpException = "uk.gov.hmrc" %% "http-exceptions" % "1.0.0"
   }
 
