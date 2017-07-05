@@ -41,7 +41,8 @@ object KenshooMonitoringBuild extends Build {
       scalaVersion := "2.11.8",
       libraryDependencies ++= appDependencies,
       crossScalaVersions := Seq("2.11.8"),
-      version := "100.0-SNAPSHOT"
+      version := "100.0-SNAPSHOT",
+      publishArtifact in Test := true
     )
     .settings(publishAllArtefacts : _*)
     .settings(resolvers += Resolver.bintrayRepo("hmrc", "releases"))

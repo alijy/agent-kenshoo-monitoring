@@ -19,7 +19,7 @@ package uk.gov.hmrc.agent.kenshoo.monitoring
 import org.scalatest.Matchers
 import play.api.libs.iteratee.Enumerator
 import play.api.mvc.{Headers, RequestHeader, ResponseHeader, Result}
-import uk.gov.hmrc.play.http.HeaderCarrier
+import uk.gov.hmrc.http.HeaderCarrier
 import uk.gov.hmrc.play.test.UnitSpec
 
 import scala.concurrent.ExecutionContext.Implicits.global

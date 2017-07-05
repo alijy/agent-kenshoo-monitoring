@@ -16,13 +16,13 @@
 
 package uk.gov.hmrc.agent.kenshoo.monitoring
 
-import com.codahale.metrics.{MetricRegistry, Meter}
+import com.codahale.metrics.{Meter, MetricRegistry}
 import org.mockito.BDDMockito.given
 import org.mockito.Mockito
 import org.mockito.Mockito.{never, verify}
 import org.scalatest.{BeforeAndAfterEach, FlatSpec}
 import org.scalatest.mock.MockitoSugar
-import uk.gov.hmrc.play.http.HeaderCarrier
+import uk.gov.hmrc.http.{HeaderCarrier, HttpResponse}
 import uk.gov.hmrc.play.http._
 import uk.gov.hmrc.play.test.UnitSpec
 
